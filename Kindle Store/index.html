@@ -44,10 +44,10 @@
                         <a class="nav-link" href="#topics">About The Book</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Reviews</a>
+                        <a class="nav-link" href="#reviews">Reviews</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Get in Touch</a>
+                        <a class="nav-link" href="#contact">Get in Touch</a>
                     </li>
                     <li class="nav-item d-lg-none">
                         <a class="nav-link " href="#pricing">Pricing</a>
@@ -313,6 +313,58 @@
                             <small>Review by Reda</small>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact form -->
+    <section id="contact">
+        <div class="container-lg">
+            <div class="text-center">
+                <h1>Get in Touch</h1>
+                <p class="lead text-muted">Questions to ask? Fill uot the form to contact me directly</p>
+            </div>
+            <div class="row justify-content-center my-5">
+                <div class="col-lg-6">
+                    <form>
+                            <label for="email" class="form-label">Email address:</label>
+                            <div class="input-group mb-4">
+                                <span class="input-group-text" id="basic-addon1">
+                                    <i class="bi bi-envelope"></i>
+                                </span>
+                                <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                            </div>
+
+                            <label for="name" class="form-label">Name:</label>
+                            <div class="input-group mb-4">
+                                <span class="input-group-text" id="basic-addon1">
+                                    <i class="bi bi-person"></i>
+                                </span>
+                                <input type="text" class="form-control" id="name" placeholder="e.g. Reda">
+                            </div>
+
+                            <label for="subject" class="form-label">Subject</label>
+                            <div class="input-group mb-4">
+                                <span class="input-group-text" id="basic-addon1">
+                                    <i class="bi bi-chat-left-dots"></i>
+                                </span>
+                                <select class="form-select" id="shubject" aria-label="size 3 select example">
+                                    <option value="pricing">Pricing</option>
+                                    <option value="content">Content</option>
+                                    <option value="other">Other query</option>
+                                </select>
+                            </div>
+
+                            <div class="form-floating my-4">
+                                <textarea class="form-control h-50" id="query"></textarea>
+                                <label for="query" class="form-label">Your query...</label>
+                            </div>
+
+                        <div class="mb-4 text-center">
+                            <button type="submit" class="btn btn-secondary">Submit</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
