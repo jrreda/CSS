@@ -72,7 +72,9 @@
                 <a class="btn btn-secondary btn-lg" href="#pricing">Buy Now</a>
             </div>
             <div class="col-md-5 text-center d-none d-md-block">
-                <img class="img-fluid" src="assets/ebook-cover.png" alt="cover">
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Book cover">
+                    <img class="img-fluid" src="assets/ebook-cover.png" alt="cover">
+                </span>
             </div>
         </div>
     </div>
@@ -328,38 +330,48 @@
             <div class="row justify-content-center my-5">
                 <div class="col-lg-6">
                     <form>
-                            <label for="email" class="form-label">Email address:</label>
-                            <div class="input-group mb-4">
-                                <span class="input-group-text" id="basic-addon1">
-                                    <i class="bi bi-envelope"></i>
+                        <label for="email" class="form-label">Email address:</label>
+                        <div class="input-group mb-4">
+                            <span class="input-group-text">
+                                <i class="bi bi-envelope"></i>
+                            </span>
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                            <span class="input-group-text">
+                                <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Enter an email address we can reply to.">
+                                    <i class="bi bi-question-circle text-muted"></i>
                                 </span>
-                                <input type="email" class="form-control" id="email" placeholder="name@example.com">
-                            </div>
+                            </span>
+                        </div>
 
-                            <label for="name" class="form-label">Name:</label>
-                            <div class="input-group mb-4">
-                                <span class="input-group-text" id="basic-addon1">
-                                    <i class="bi bi-person"></i>
+                        <label for="name" class="form-label">Name:</label>
+                        <div class="input-group mb-4">
+                            <span class="input-group-text">
+                                <i class="bi bi-person"></i>
+                            </span>
+                            <input type="text" class="form-control" id="name" placeholder="e.g. Reda">
+                            <span class="input-group-text">
+                                <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Pretty self explantory">
+                                    <i class="bi bi-question-circle text-muted"></i>
                                 </span>
-                                <input type="text" class="form-control" id="name" placeholder="e.g. Reda">
-                            </div>
+                            </span>
+                        </div>
 
-                            <label for="subject" class="form-label">Subject</label>
-                            <div class="input-group mb-4">
-                                <span class="input-group-text" id="basic-addon1">
-                                    <i class="bi bi-chat-left-dots"></i>
-                                </span>
-                                <select class="form-select" id="shubject" aria-label="size 3 select example">
-                                    <option value="pricing">Pricing</option>
-                                    <option value="content">Content</option>
-                                    <option value="other">Other query</option>
-                                </select>
-                            </div>
+                        <label for="subject" class="form-label">Subject</label>
+                        <div class="input-group mb-4">
+                            <span class="input-group-text">
+                                <i class="bi bi-chat-left-dots"></i>
+                            </span>
+                            <select class="form-select" id="shubject" aria-label="size 3 select example">
+                                <option value="pricing">Pricing</option>
+                                <option value="content">Content</option>
+                                <option value="other">Other query</option>
+                            </select>
+                        </div>
 
-                            <div class="form-floating my-4">
-                                <textarea class="form-control h-50" id="query"></textarea>
-                                <label for="query" class="form-label">Your query...</label>
-                            </div>
+                        <div class="form-floating my-4">
+                            <textarea class="form-control h-50" id="query"></textarea>
+                            <label for="query" class="form-label">Your query...</label>
+                        </div>
 
                         <div class="mb-4 text-center">
                             <button type="submit" class="btn btn-secondary">Submit</button>
@@ -373,7 +385,14 @@
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">
+    </script>
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
 </body>
 
 </html>
